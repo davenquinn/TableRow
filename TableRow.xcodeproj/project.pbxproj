@@ -11,7 +11,6 @@
 		4F1D4934205D48790079A1DA /* TableRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D4933205D48790079A1DA /* TableRowTests.swift */; };
 		4F1D4936205D48790079A1DA /* TableRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F1D4928205D48790079A1DA /* TableRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F1D4940205D49B00079A1DA /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D493F205D49B00079A1DA /* TableRow.swift */; };
-		4F1D4942205D49E30079A1DA /* TableInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D4941205D49E30079A1DA /* TableInlineRow.swift */; };
 		4F1D4944205E7EAB0079A1DA /* IntrinsicContentSizeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D4943205E7EAB0079A1DA /* IntrinsicContentSizeTableView.swift */; };
 		4F1D4980205F08C20079A1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D497F205F08C20079A1DA /* AppDelegate.swift */; };
 		4F1D4982205F08C20079A1DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D4981205F08C20079A1DA /* ViewController.swift */; };
@@ -23,6 +22,7 @@
 		4F1D49BC205F3C440079A1DA /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D49AF205F3A970079A1DA /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F1D49BE205F3C760079A1DA /* TableRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D4925205D48790079A1DA /* TableRow.framework */; };
 		4F1D49BF205F3C760079A1DA /* TableRow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D4925205D48790079A1DA /* TableRow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85B6C843229F907200373F00 /* TableInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1D4941205D49E30079A1DA /* TableInlineRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,11 +252,12 @@
 				TargetAttributes = {
 					4F1D4924205D48790079A1DA = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					4F1D492D205D48790079A1DA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					4F1D497C205F08C10079A1DA = {
@@ -351,8 +352,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F1D4942205D49E30079A1DA /* TableInlineRow.swift in Sources */,
 				4F1D4940205D49B00079A1DA /* TableRow.swift in Sources */,
+				85B6C843229F907200373F00 /* TableInlineRow.swift in Sources */,
 				4F1D4944205E7EAB0079A1DA /* IntrinsicContentSizeTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,7 +548,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -572,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loromits.TableRow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -582,11 +583,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3FMQ4ZM4;
 				INFOPLIST_FILE = TableRowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = this.TableRowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -596,11 +598,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H3FMQ4ZM4;
 				INFOPLIST_FILE = TableRowTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = this.TableRowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

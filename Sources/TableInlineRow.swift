@@ -77,25 +77,27 @@ final public class TableInlineRow<T>: _TableInlineRow<T>, RowType, InlineRowType
             cell.detailTextLabel?.textColor = cell.tintColor
         }
     }
-    
+
     override public func customDidSelect() {
         super.customDidSelect()
         if !isDisabled {
             toggleInlineRow()
         }
     }
-    
-    override public func setupInlineRow(_ inlineRow: InlineRow) {
+
+  public override func setupInlineRow(_ inlineRow: TableRow<T>) {
         super.setupInlineRow(inlineRow)
         inlineRow.onDidSelect { [weak self] _ in
             if self?.collapseOnInlineRowSelection ?? true {
                 self?.toggleInlineRow()
             }
         }
+ 
         inlineRow.textColor = subcellTextColor
         inlineRow.horizontalContentInset = subcellHorizontalInset
     }
-    
+  
+  
     /// This block gets called immediately and on `expanded/collapsed` state changes,
     /// setting first parameter `true` if `expanded`
     @discardableResult
@@ -105,4 +107,5 @@ final public class TableInlineRow<T>: _TableInlineRow<T>, RowType, InlineRowType
         onCollapseInlineRow { callback(false, $0, $1, $2) }
         return self
     }
+
 }
